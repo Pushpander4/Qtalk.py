@@ -1,0 +1,52 @@
+import time
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
+
+
+driver = webdriver.Chrome(ChromeDriverManager().install())
+parent_handel = driver.current_window_handle
+
+
+def open_browser():
+    driver.maximize_window()
+    driver.get("https://youthful-shirley-3dacfb.netlify.app/")
+    print("Title Name", driver.title)
+
+def home():
+    driver.find_element(By.XPATH, "//a[normalize-space()='Home']").is_enabled()
+    print("Home button Enable=", home)
+    HomeText =driver.find_element(By.XPATH, "//a[normalize-space()='Home']").text
+    assert (HomeText == "Home")
+    driver.find_element(By.XPATH, "//a[normalize-space()='Home']").click()
+
+def Click_Qtalk():
+    driver.find_element(By.XPATH, "//a[normalize-space()='QTalk']").click()
+
+
+def continue_with_Google_button():
+    driver.find_element(By.XPATH , "//div[@role='button']").click()
+    time.sleep(5)
+    all_handels = driver.window_handles
+    print(all_handels)
+    for handle in all_handels :
+       if handle !=parent_handel:
+           driver.switch_to.window(handle)
+           time.sleep(4)
+           driver.find_element(By.CSS_SELECTOR , "#identifierId").send_keys("pushpander@buzz4health.com")
+           time.sleep(4)
+           driver.find_element(By.XPATH, "//span[normalize-space()='Next']").click()
+           time.sleep(4)
+           driver.find_element(By.XPATH, "//input[@name='password']").send_keys("buzzhealth4")
+           time.sleep(4)
+           driver.find_element(By.XPATH, "//span[normalize-space()='Next']").click()
+           time.sleep(4)
+    driver.switch_to.window(parent_handel)
+
+
+def click_create_quicktalk_button():
+    driver.find_element(By.XPATH, "//button[normalize-space()='Create Quicktalk']").click()
+    time.sleep(5)
+
+
+
