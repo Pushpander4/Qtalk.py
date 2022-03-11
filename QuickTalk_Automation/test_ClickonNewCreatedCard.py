@@ -1,7 +1,8 @@
-import test_enter_name_new_qtalk
-import funtion
-from selenium.webdriver.common.by import By
 import time
+
+import funtion
+import test_enter_name_new_qtalk
+from selenium.webdriver.common.by import By
 
 
 def testclickon_new_created_card():

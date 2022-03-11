@@ -1,6 +1,7 @@
-from selenium.webdriver.common.by import By
-import funtion
 import time
+
+import funtion
+from selenium.webdriver.common.by import By
 
 funtion.open_browser()
 time.sleep(5)

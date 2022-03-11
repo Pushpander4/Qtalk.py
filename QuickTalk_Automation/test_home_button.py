@@ -1,4 +1,5 @@
 import time
+
 import funtion
 
 funtion.open_browser()
