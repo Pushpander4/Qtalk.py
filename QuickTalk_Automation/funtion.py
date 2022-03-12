@@ -9,7 +9,9 @@ chrome_options = Options()
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--disable-dev-shm-usage')
-driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=chrome_options)
+chrome_options.add_argument("--remote-debugging-port=9222")
+chrome_options.add_argument("--useAutomationExtension=false")
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
 parent_handel = driver.current_window_handle
 
 
