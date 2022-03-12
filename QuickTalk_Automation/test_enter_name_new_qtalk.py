@@ -1,6 +1,8 @@
 import time
+
 import funtion
 from selenium.webdriver.common.by import By
+
 
 def testenter_name_for_qtalk():
     funtion.open_browser()
