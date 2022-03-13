@@ -14,18 +14,13 @@ chrome_options.add_argument("--remote-debugging-port=9222")
 chrome_options.add_argument("--useAutomationExtension=false")
 chrome_options.add_argument('--ignore-certificate-errors')
 chrome_options.add_argument("--test-type")
-chrome_options.addArguments("test-type");
-chrome_options.addArguments("start-maximized");
-chrome_options.addArguments("--window-size=1920,1080");
-chrome_options.addArguments("--enable-precise-memory-info");
-chrome_options.addArguments("--disable-popup-blocking");
-chrome_options.addArguments("--disable-default-apps");
-chrome_options.addArguments("test-type=browser");
-chrome_options.AddArgument("--incognito");
-chrome_options.AddArgument("--no-sandbox");
-chrome_options.binary_location = "/usr/bin/chromium-browser"
+#chrome_options.addArguments("test-type");
+#chrome_options.addArgument("--start-maximized");
+#chrome_options.addArgument("--window-size=1920,1080");
+#chrome_options.binary_location = "/usr/bin/chromium-browser"
 #driver = webdriver.Chrome(chrome_options=options)
-driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=options)
+
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
 parent_handel = driver.current_window_handle
 
 
