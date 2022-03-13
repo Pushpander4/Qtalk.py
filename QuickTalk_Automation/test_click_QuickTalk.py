@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 
 funtion.open_browser()
 def testQuickTakl_button():
-    funtion.Click_Qtalk()
+    funtion.click_qtalk()
 
 
 
