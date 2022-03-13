@@ -12,8 +12,8 @@ chrome_options.add_argument('--headless')
 chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument("--remote-debugging-port=9222")
 chrome_options.add_argument("--useAutomationExtension=false")
-chrome_options.add_argument('--ignore-certificate-errors')
-chrome_options.add_argument("--test-type")
+#chrome_options.add_argument('--ignore-certificate-errors')
+#chrome_options.add_argument("--test-type")
 #chrome_options.addArguments("test-type");
 #chrome_options.addArgument("--start-maximized");
 #chrome_options.addArgument("--window-size=1920,1080");
