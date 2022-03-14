@@ -25,13 +25,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Install Google Chrome 
-      run: |
-       steps:
-       - uses: browser-actions/setup-chrome@latest
-       - run: chrome --version
-
-      
 
     - name: linting
       uses: alexanderdamiani/pylinter@v1.1.1
