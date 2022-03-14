@@ -20,7 +20,7 @@ chrome_options.add_argument("--useAutomationExtension=false")
 # chrome_options.binary_location = "/usr/bin/chromium-browser"
 # driver = webdriver.Chrome(chrome_options=options)
 
-driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+driver = webdriver.Chrome(ChromeDriverManager().install())
 parent_handel = driver.current_window_handle
 
 
@@ -65,3 +65,5 @@ def continue_with_Google_button():
 def click_create_quicktalk_button():
     driver.find_element(By.XPATH, "//button[normalize-space()='Create Quicktalk']").click()
     time.sleep(5)
+
+

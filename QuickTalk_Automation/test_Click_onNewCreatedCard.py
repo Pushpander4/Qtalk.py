@@ -5,7 +5,7 @@ import test_enter_name_new_qtalk
 from selenium.webdriver.common.by import By
 
 
-def testclickon_new_created_card():
+def test_click_on_new_created_card():
     card_elements = funtion.driver.find_elements(By.CLASS_NAME, "card-main ")
     print(card_elements)
     for card_elem in card_elements:

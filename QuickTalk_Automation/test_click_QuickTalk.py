@@ -4,9 +4,10 @@ import funtion
 from selenium.webdriver.common.by import By
 
 funtion.open_browser()
-def testQuickTakl_button():
-    funtion.click_qtalk()
 
+
+def testQuickTalk_button():
+    funtion.click_qtalk()
 
 
 def test_placeholder_in_QuickTalk():
@@ -15,8 +16,10 @@ def test_placeholder_in_QuickTalk():
 
 
 def test_checking_text_on_create_quicktalk_button():
-    Create_Quicktalk_button = funtion.driver.find_element(By.XPATH, "//button[normalize-space()='Create Quicktalk']").text
+    Create_Quicktalk_button = funtion.driver.find_element(By.XPATH,
+                                                          "//button[normalize-space()='Create Quicktalk']").text
     assert (Create_Quicktalk_button == "Create Quicktalk")
+
 
 def test_room_name_lable_text():
     room_name_lable = funtion.driver.find_element(By.XPATH, "//label[normalize-space()='Room Name']").text
@@ -25,4 +28,3 @@ def test_room_name_lable_text():
 
 def test_click_create_quicktalk_button():
     funtion.click_create_quicktalk_button()
-
