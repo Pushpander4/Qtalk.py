@@ -28,9 +28,9 @@ jobs:
     - name: Install Google Chrome 
       run: |
 
-              chmod +x ./scripts/InstallChrome.sh
+              ["chmod", "+x" , "/scripts/InstallChrome.sh"]
 
-                          ./scripts/InstallChrome.sh 
+                          ["./scripts/InstallChrome.sh"]
 
     - name: linting
       uses: alexanderdamiani/pylinter@v1.1.1
