@@ -20,7 +20,7 @@ chrome_options.add_argument("--useAutomationExtension=false")
 # chrome_options.binary_location = "/usr/bin/chromium-browser"
 # driver = webdriver.Chrome(chrome_options=options)
 
-driver = webdriver.Chrome(ChromeDriverManager().install())
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
 parent_handel = driver.current_window_handle
 
 
